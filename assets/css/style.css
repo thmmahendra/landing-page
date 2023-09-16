@@ -385,11 +385,41 @@ input:where([type="text"], [type="email"], ) {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: url("images/bg-tablet-pattern.svg"),
-    url("images/bg-tablet-pattern.svg");
+  background-image: url("../images/bg-tablet-pattern.svg"),
+    url("../images/bg-tablet-pattern.svg");
   background-position: -15rem -5rem, 80rem -42rem;
   background-repeat: no-repeat;
   opacity: 0.1;
+}
+
+/* Numbered Items */
+
+.numbered-items {
+  counter-reset: count;
+}
+
+.numbered-items li {
+  counter-increment: count;
+}
+
+.numbered-items div {
+  display: grid;
+  align-items: center;
+  column-gap: var(--size-300);
+  grid-template-columns: min-content 1fr;
+}
+
+.numbered-items p {
+  grid-column: 1 / -1;
+}
+
+.numbered-items div::before {
+  content: "0" counter(count);
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  background-color: var(--clr-accent-400);
+  padding: 0 var(--size-500);
+  border-radius: 100vw;
 }
 
 /* Utility classes */
