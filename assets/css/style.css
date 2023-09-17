@@ -475,6 +475,18 @@ input:where([type="text"], [type="email"], ) {
   flex: 0 0 auto;
 }
 
+@media (min-width:30em) {
+  .slider>* {
+    width: 50%;
+  }
+}
+
+@media (min-width:50em) {
+  .slider>* {
+    width: 35%;
+  }
+}
+
 .slider-content {
   border-radius: var(--size-100);
   padding: var(--size-700) var(--size-600) var(--size-600);
