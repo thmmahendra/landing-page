@@ -83,7 +83,8 @@ html:focus-within {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -583,6 +584,31 @@ input:where([type="text"], [type="email"], ) {
   }
 }
 
+/* Sales Points */
+
+.sales-points_blog {
+  position: relative;
+}
+
+.sales-points_blog::before {
+  content: url("../images/bg-tablet-pattern.svg");
+  zoom: 40%;
+  position: absolute;
+  z-index: -1;
+  left: 70%;
+  bottom: 120%;
+  width: 100px;
+}
+
+@media (min-width: 50em) {
+  .sales-points_blog::before {
+    zoom: 70%;
+    z-index: -1;
+    left: -700px;
+    top: 42%;
+    width: 100px;
+  }
+}
 
 /* Utility classes */
 
